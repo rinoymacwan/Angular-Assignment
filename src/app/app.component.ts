@@ -21,4 +21,5 @@ export class AppComponent implements OnInit{
   func1(): void {
     console.log(this.emp.firstName);
   }
+  get diagnostic() { return JSON.stringify(this.emp); }
 }

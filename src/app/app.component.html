@@ -1,8 +1,118 @@
-what
-
-<input [(ngModel)]= 'str' />
-<button (click)='func()'>clickMe</button>
-
-
-<input [(ngModel)]= 'emp.firstName' />
+<!--
+<input [(ngModel)]='emp.firstName' />
 <button (click)='func1()'>clickMe</button>
+-->
+
+<div class="container-fluid">
+  <form>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">First Name:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="emp.firstName" name="firstName">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Last Name:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="lastName" [(ngModel)]="emp.lastName" name="lastName">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Email:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="email" [(ngModel)]="emp.email" name="email">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Contact Number:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="contactNumber" [(ngModel)]="emp.contactNumber" name="contactNumber ">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Address</label>
+      <div class="col-sm-3">
+        <textarea class="form-control" id="address" [(ngModel)]="emp.address" name="address"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Username:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="username" [(ngModel)]="emp.username" name="username">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Password:</label>
+      <div class="col-sm-3">
+        <input type="password" class="form-control" id="password" [(ngModel)]="emp.password" name="password">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Gender:</label>
+      <div class="col-sm-3">
+        <label class="col-sm-4 col-form-label"><input type="radio" name="gender">Male</label>
+        <label class="col-sm-4 col-form-label"><input type="radio" name="gender">Female</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Qualification:</label>
+      <div class="col-sm-3">
+        <select class="form-control" id="sel1">
+          <option value="" selected disabled hidden>--Select--</option>
+          <option>Undergraduate</option>
+          <option>Graduate</option>
+          <option>Postgraduate</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Experience:</label>
+      <div class="col-sm-3">
+        <select class="form-control" id="sel1">
+          <option value="" selected disabled hidden>--Select--</option>
+          <option>0 - 2 years</option>
+          <option>2 - 7 years</option>
+          <option>above 7 years</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Coding Languages:</label>
+      <div class="col-sm-3 form-check">
+
+        <div class="checkbox">
+          <label><input type="checkbox" value="C/C++" id="C\cBox1">C/C++</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="Java" id="C\cBox2">Java</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="C#" id="C\cBox3">C#</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="PHP" id="C\cBox4">PHP</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="Python" id="C\cBox5">Python</label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-group row col-sm-3">
+      <input type="submit" class="btn btn-primary">
+    </div>
+  </form>
+</div>
+
+{{diagnostic}}
