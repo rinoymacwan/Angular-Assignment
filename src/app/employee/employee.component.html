@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <form #empForm="ngForm" (ngSubmit)="onSubmit()" >
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">First Name:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="emp.firstName" name="firstName">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Last Name:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="lastName" [(ngModel)]="emp.lastName" name="lastName">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Email:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="email" [(ngModel)]="emp.email" name="email">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Contact Number:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="contactNumber" [(ngModel)]="emp.contactNumber"
+          name="contactNumber ">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Address</label>
+      <div class="col-sm-3">
+        <textarea class="form-control" id="address" [(ngModel)]="emp.address" name="address"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Username:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="username" [(ngModel)]="emp.username" name="username">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Password:</label>
+      <div class="col-sm-3">
+        <input type="password" class="form-control" id="password" [(ngModel)]="emp.password" name="password">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Gender:</label>
+      <div class="col-sm-3">
+        <label class="col-sm-4 col-form-label"><input type="radio" [(ngModel)]="emp.gender" value="Male"
+            name="gender">Male</label>
+        <label class="col-sm-4 col-form-label"><input type="radio" [(ngModel)]="emp.gender" value="Female"
+            name="gender">Female</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Qualification:</label>
+      <div class="col-sm-3">
+        <select class="form-control" id="sel1" [(ngModel)]="emp.qualification" name="qualification">
+          <option *ngFor="let q of qualifications" [value]="q">{{q}}</option>
+        </select>
+
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Experience:</label>
+      <div class="col-sm-3">
+        <select class="form-control" id="sel2" [(ngModel)]="emp.experience" name="experience">
+          <option *ngFor="let e of experienceList" [value]="e">{{e}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Coding Languages:</label>
+
+      <label class="col-sm-1 form-check" *ngFor="let l of languagesList" value="l">
+        <input type="checkbox" [(checklist)]="emp.codingLangauges" [checklistValue]="l" />
+        {{l}}
+      </label>
+    </div>
+
+    <div class="form-group row col-sm-3">
+      <input type="submit" class="btn btn-primary">
+    </div>
+  </form>
+</div>
+
