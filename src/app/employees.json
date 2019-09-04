@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "firstName": "Rinoy",
+    "lastName": "Macwan",
+    "email": "rm@gmail.com",
+    "contactNumber": "9874563210",
+    "address": "Monalisa, Manjalpur",
+    "username": "rinoym",
+    "password": "promact",
+    "gender": "Male",
+    "qualification": "Postgraduate",
+    "experience": "0 - 2 years",
+    "codingLangauges": ["C/C++","Java"]
+  },
+
+  {
+    "id": 2,
+    "firstName": "Yonir",
+    "lastName": "Macwan",
+    "email": "mr@mailg.com",
+    "contactNumber": 9874563210,
+    "address": "Manjalpur, Vadodara",
+    "username": "mrmr",
+    "password": "mactpro",
+    "gender": "Male",
+    "qualification": "Undergraduate",
+    "experience": "2 - 7 years ",
+    "codingLangauges": ["Python"]
+  }
+]
