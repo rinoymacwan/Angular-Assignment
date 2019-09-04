@@ -54,9 +54,9 @@
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Gender:</label>
       <div class="col-sm-3">
-        <label class="col-sm-4 col-form-label"><input type="radio" [(ngModel)]="emp.gender" value="Male"
+        <label class="col-sm-5 col-form-label"><input type="radio" [(ngModel)]="emp.gender" value="Male"
             name="gender" required>Male</label>
-        <label class="col-sm-4 col-form-label"><input type="radio" [(ngModel)]="emp.gender" value="Female"
+        <label class="col-sm-5 col-form-label"><input type="radio" [(ngModel)]="emp.gender" value="Female"
             name="gender" required>Female</label>
       </div>
     </div>
@@ -83,7 +83,7 @@
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Coding Languages:</label>
 
-      <label class="col-sm-1 form-check" *ngFor="let l of languagesList" value="l">
+      <label class="col-sm-1.5 form-check" *ngFor="let l of languagesList" value="l">
         <input type="checkbox" [(checklist)]="emp.codingLangauges" [checklistValue]="l" />
         {{l}}
       </label>
