@@ -26,4 +26,7 @@ export class EmpListComponent implements OnInit {
   get myFunc() {
     return JSON.stringify(this.listOfEmployees[0]);
   }
+  delete(id: number): void {
+    this.dataService.delete(id);
+  }
 }

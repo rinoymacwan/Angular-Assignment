@@ -52,4 +52,8 @@ export class DataService {
     emp.id = DataService.idMax++;
     let len = this.listOfEmployees.push(emp);
   }
+  delete(id: number): void{
+    let index = this.listOfEmployees.findIndex(d => d.id === id);
+    this.listOfEmployees.splice(index, 1);
+  }
 }

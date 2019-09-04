@@ -1,7 +1,7 @@
 <!--
   <p *ngFor="let emp of listOfEmployees; let i = index">{{listOfEmployees[i] | json}}</p>
 -->
-<div class = "table-responsive">
+<div class = "table">
 <table class = "table">
 
   <thead>
@@ -33,10 +33,13 @@
       <td>{{emp.codingLangauges}}</td>
 
       <td>
-          <a [routerLink]="['/employees', emp.id]">
-            <Button class="btn btn-primary">Edit</Button>
-          </a>
-        </td>
+        <a [routerLink]="['/employees', emp.id]">
+          <Button class="btn btn-primary">Edit</Button>
+        </a>
+      </td>
+      <td>
+          <Button class="btn btn-danger" (click)="delete(emp.id)">Delete</Button>
+      </td>
 
 
     </tr>
