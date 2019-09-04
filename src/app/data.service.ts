@@ -47,18 +47,9 @@ export class DataService {
     const k = this.listOfEmployees.find(x => x.id === emp.id);
     const y = this.listOfEmployees.indexOf(k);
     this.listOfEmployees[y] = emp;
-    console.log(JSON.stringify(emp));
-    console.log(this.listOfEmployees.length);
-    // redirect
   }
   addEmp(emp: Employee): void {
     emp.id = DataService.idMax++;
     let len = this.listOfEmployees.push(emp);
-    console.log(JSON.stringify(emp));
-    console.log("aa");
-    console.log(this.listOfEmployees.length);
-    console.log("aa");
-    console.log(len);
-    // redirect
   }
 }

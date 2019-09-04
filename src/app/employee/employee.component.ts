@@ -51,6 +51,7 @@ export class EmployeeComponent implements OnInit {
 
   onSubmit(form: NgForm): void {
     const param = this.route.snapshot.paramMap.get('id');
+    console.log(JSON.stringify(this.emp));
     if (+param === 0){
       this.dataService.addEmp(this.emp);
       this.router.navigate(['/emp-list']);
