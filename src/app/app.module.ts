@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     EmployeeComponent,
     EmpListComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot([
       { path: 'emp-list', component: EmpListComponent },
       { path: 'employees', component: EmployeeComponent },
-      { path: 'employees/:id', component: EmployeeComponent }
+      { path: 'employees/:id', component: EmployeeComponent },
+      { path: 'welcome', component: WelcomeComponent },
+      { path: '', component: WelcomeComponent }
     ]),
   ],
   providers: [],
