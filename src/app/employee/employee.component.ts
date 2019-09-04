@@ -54,10 +54,10 @@ export class EmployeeComponent implements OnInit {
     console.log(JSON.stringify(this.emp));
     if (+param === 0){
       this.dataService.addEmp(this.emp);
-      this.router.navigate(['/emp-list']);
+      this.router.navigate(['/emp-list'], { state: { msg: 'New Employee added.' } } );
     } else {
       this.dataService.updateEmp(this.emp);
-      this.router.navigate(['/emp-list']);
+      this.router.navigate(['/emp-list'], { state: { msg: 'Employee updated.' } } );
     }
   }
 }

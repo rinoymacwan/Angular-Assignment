@@ -49,7 +49,8 @@ export class DataService {
     this.listOfEmployees[y] = emp;
   }
   addEmp(emp: Employee): void {
-    emp.id = DataService.idMax++;
+    DataService.idMax++;
+    emp.id = DataService.idMax;
     let len = this.listOfEmployees.push(emp);
   }
   delete(id: number): void{

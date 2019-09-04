@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee.model';
 import { DataService } from '../data.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-emp-list',
   templateUrl: './emp-list.component.html',
@@ -10,11 +11,24 @@ import { CommonModule } from '@angular/common';
 export class EmpListComponent implements OnInit {
 
   listOfEmployees: Employee[];
-  constructor(private dataService: DataService) { }
+  msg: string;
+  flag: boolean;
+  constructor(private dataService: DataService, private router: Router) {
+
+    if (this.router.getCurrentNavigation().extras.state != null)
+    {
+      this.flag = true;
+      this.msg = this.router.getCurrentNavigation().extras.state.msg;
+      console.log(this.msg);
+    } else{
+      this.flag = false;
+      console.log("asdasd");
+    }
+   }
 
   ngOnInit(): void {
     this.listOfEmployees = this.dataService.getAllEmp();
-    //console.log(this.listOfEmployees[0].firstName);
+    // console.log(this.listOfEmployees[0].firstName);
     /*
     this.dataService.getAll().subscribe(
       employees => {

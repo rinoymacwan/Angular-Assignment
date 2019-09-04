@@ -1,24 +1,24 @@
 <div class="container-fluid">
-  <form #empForm="ngForm" (ngSubmit)="onSubmit()" >
+  <form #empForm="ngForm" (ngSubmit)="onSubmit()" ngNativeValidate>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">First Name:</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" id="firstName" [(ngModel)]="emp.firstName" name="firstName">
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="emp.firstName" name="firstName" required>
       </div>
     </div>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Last Name:</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" id="lastName" [(ngModel)]="emp.lastName" name="lastName">
+        <input type="text" class="form-control" id="lastName" [(ngModel)]="emp.lastName" name="lastName" required>
       </div>
     </div>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Email:</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" id="email" [(ngModel)]="emp.email" name="email">
+        <input type="text" class="form-control" id="email" [(ngModel)]="emp.email" name="email" required>
       </div>
     </div>
 
@@ -26,28 +26,28 @@
       <label class="col-sm-2 col-form-label">Contact Number:</label>
       <div class="col-sm-3">
         <input type="text" class="form-control" id="contactNumber" [(ngModel)]="emp.contactNumber"
-          name="contactNumber ">
+          name="contactNumber" required>
       </div>
     </div>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Address</label>
       <div class="col-sm-3">
-        <textarea class="form-control" id="address" [(ngModel)]="emp.address" name="address"></textarea>
+        <textarea class="form-control" id="address" [(ngModel)]="emp.address" name="address" required></textarea>
       </div>
     </div>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Username:</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" id="username" [(ngModel)]="emp.username" name="username">
+        <input type="text" class="form-control" id="username" [(ngModel)]="emp.username" name="username" required>
       </div>
     </div>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Password:</label>
       <div class="col-sm-3">
-        <input type="password" class="form-control" id="password" [(ngModel)]="emp.password" name="password">
+        <input type="password" class="form-control" id="password" [(ngModel)]="emp.password" name="password" required>
       </div>
     </div>
 
@@ -55,16 +55,16 @@
       <label class="col-sm-2 col-form-label">Gender:</label>
       <div class="col-sm-3">
         <label class="col-sm-4 col-form-label"><input type="radio" [(ngModel)]="emp.gender" value="Male"
-            name="gender">Male</label>
+            name="gender" required>Male</label>
         <label class="col-sm-4 col-form-label"><input type="radio" [(ngModel)]="emp.gender" value="Female"
-            name="gender">Female</label>
+            name="gender" required>Female</label>
       </div>
     </div>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Qualification:</label>
       <div class="col-sm-3">
-        <select class="form-control" id="sel1" [(ngModel)]="emp.qualification" name="qualification">
+        <select class="form-control" id="sel1" [(ngModel)]="emp.qualification" name="qualification" required>
           <option *ngFor="let q of qualifications" [value]="q">{{q}}</option>
         </select>
 
@@ -74,7 +74,7 @@
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Experience:</label>
       <div class="col-sm-3">
-        <select class="form-control" id="sel2" [(ngModel)]="emp.experience" name="experience">
+        <select class="form-control" id="sel2" [(ngModel)]="emp.experience" name="experience" required>
           <option *ngFor="let e of experienceList" [value]="e">{{e}}</option>
         </select>
       </div>
@@ -94,4 +94,3 @@
     </div>
   </form>
 </div>
-
