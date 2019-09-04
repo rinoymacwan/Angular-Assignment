@@ -41,6 +41,8 @@ export class EmpListComponent implements OnInit {
     return JSON.stringify(this.listOfEmployees[0]);
   }
   delete(id: number): void {
-    this.dataService.delete(id);
+    if (confirm('Are you sure you want to delete this employee?')) {
+      this.dataService.delete(id);
+    }
   }
 }
